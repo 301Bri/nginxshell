@@ -1,7 +1,10 @@
 services:
   - type: web
-    name: shell-proxy
+    name: puppeteer-proxy
     env: node
     plan: free
-    buildCommand: npm install
-    startCommand: node index.js
+    buildCommand: "npm install"
+    startCommand: "node index.js"
+    envVars:
+      - key: NODE_ENV
+        value: production
